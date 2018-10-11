@@ -13,6 +13,6 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('main');
 
 Route::resource('articles', 'ArticleController');
