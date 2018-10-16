@@ -12,4 +12,12 @@ class Article extends Model
         'content',
         'category'
     ];
+
+    /**
+     * Get the user that owns the article.
+     */
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

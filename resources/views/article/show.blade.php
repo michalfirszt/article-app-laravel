@@ -12,4 +12,8 @@
         {{ $article->content }}
     </div>
 
+    <h5>
+        Author: {{ $article->user->name }}
+    </h5>
+
 @endsection
