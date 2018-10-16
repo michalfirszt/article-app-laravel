@@ -15,13 +15,13 @@
         <tbody>
             @foreach ($articles as $article)
             <tr>
-                    <td>{{ $article->title }}</td>
-                    <td>{{ $article->description }}</td>
-                    <td>
-                        <a href=" {{ route('articles.show', ['article' => $article->id]) }} ">
-                            <button class="btn btn-outline-info">Details</button>
-                        </a>
-                    </td>
+                <td>{{ $article->title }}</td>
+                <td>{{ $article->description }}</td>
+                <td>
+                    <a href=" {{ route('articles.show', ['article' => $article->id]) }} ">
+                        <button class="btn btn-outline-info">Details</button>
+                    </a>
+                </td>
             </tr>
             @endforeach  
         </tbody>

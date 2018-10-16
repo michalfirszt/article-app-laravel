@@ -16,3 +16,5 @@ Route::get('/', function () {
 })->name('main');
 
 Route::resource('articles', 'ArticleController');
+
+Auth::routes();
