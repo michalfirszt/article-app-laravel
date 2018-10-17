@@ -9,6 +9,7 @@
             <tr>
                 <th>Title</th>
                 <th>Description</th>
+                <th>Author</th>
                 <th></th>
             </tr>
         </thead>
@@ -17,6 +18,7 @@
             <tr>
                 <td>{{ $article->title }}</td>
                 <td>{{ $article->description }}</td>
+                <td>{{ $article->user->name }}</td>
                 <td>
                     <a href=" {{ route('articles.show', ['article' => $article->id]) }} ">
                         <button class="btn btn-outline-info">Details</button>

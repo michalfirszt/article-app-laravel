@@ -21,6 +21,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('articles.index') }}">Articles</a>
                 </li>
+            @auth
+                <li class="nav-item"> 
+                    <a class="nav-link" href="{{ route('articles.create') }}">Add article</a>
+                </li>
+            @endauth
             </ul>
             <ul class="navbar-nav ml-auto">
             @guest
