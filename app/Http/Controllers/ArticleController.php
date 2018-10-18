@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateArticleRequest;
 use Auth;
+use Session;
 use App\Article;
 
 class ArticleController extends Controller
@@ -52,6 +53,8 @@ class ArticleController extends Controller
         $article = new Article($request->all());
 
         Auth::user()->articles()->save($article);
+
+        Session::flash('article_created');
 
         return redirect()->route('articles.index');
     }

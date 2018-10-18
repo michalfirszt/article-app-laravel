@@ -2,6 +2,14 @@
 
 @section('content')
 
+    @if (Session::has('article_created'))
+
+    <div class="alert alert-success">
+        <h5>Article created</h5>
+    </div>
+    
+    @endif
+
     @if(count($articles) > 0)
     
     <table class="table table-hover">
