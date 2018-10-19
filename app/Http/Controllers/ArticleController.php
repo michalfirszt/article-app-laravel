@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateArticleRequest;
+use App\Http\Requests\EditArticleRequest;
 use Auth;
 use Session;
 use App\Article;
@@ -80,19 +81,25 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $article = Article::findOrFail($id);
+
+        return view('article.edit')->with('article', $article);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\EditArticleRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EditArticleRequest $request, $id)
     {
-        //
+        $article = Article::findOrFail($id);
+
+        $article->update($request->all());
+
+        return redirect()->route('articles.index');
     }
 
     /**
