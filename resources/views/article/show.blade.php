@@ -24,6 +24,17 @@
             </a>
         </div>
 
+        <div class="col-md-2">
+            {!! Form::open([
+                'method' => 'DELETE',
+                'action' => ['ArticleController@destroy', $article->id] 
+            ]) !!}
+        
+            {!! Form::submit('Delete Article', ['class' => 'btn btn-outline-danger']) !!}
+        
+            {!! Form::close() !!}
+        </div>
+
     </div>
     
 @endsection
