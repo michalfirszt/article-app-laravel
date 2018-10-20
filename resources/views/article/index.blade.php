@@ -2,10 +2,10 @@
 
 @section('content')
 
-    @if (Session::has('article_created'))
+    @if (Session::has('message'))
 
     <div class="alert alert-success">
-        <h5>Article created</h5>
+        <h5>{{ Session::get('message') }}</h5>
     </div>
     
     @endif

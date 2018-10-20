@@ -56,7 +56,7 @@
 
         <div class="form-group row">
 
-            {!! Form::submit('Edit article', ['class' => 'btn btn-outline-primary']) !!}
+            {!! Form::submit('Save changes', ['class' => 'btn btn-outline-primary']) !!}
 
         </div>
 
