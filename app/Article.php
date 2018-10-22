@@ -20,4 +20,12 @@ class Article extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    /**
+     * The categories that belong to the article.
+     */
+    public function categories()
+    {
+        return $this->belongsToMany('App\Category')->withTimestamps();
+    }
 }
